@@ -46,8 +46,6 @@ public class MainMenu implements Screen {
 
 	@Override
 	public void show() {
-		// TODO Auto-generated method stub
-		//stage = new Stage();
 		stage = new Stage();
 		
 		skin = new Skin(Gdx.files.internal("uiskin.json"));
@@ -57,9 +55,7 @@ public class MainMenu implements Screen {
 		startGameButton.setX(Gdx.graphics.getWidth()/2);
 		startGameButton.setY(Gdx.graphics.getHeight()/2);
 		startGameButton.setPosition(0, 0);
-		//startGameButton.setWidth(100);
-		//startGameButton.setHeight(50);
-		
+
 		Gdx.input.setInputProcessor(stage);
 		//optionsButton = new TextButton("Options", skin);
 		//exitButton = new TextButton("Exit", Assets.skin);

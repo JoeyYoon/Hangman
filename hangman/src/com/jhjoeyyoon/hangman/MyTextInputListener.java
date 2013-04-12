@@ -4,8 +4,7 @@ import com.badlogic.gdx.Input.TextInputListener;
 
 public class MyTextInputListener implements TextInputListener {
 
-	String word;
-	@Override
+	public String word = "";
 	public void input(String text) {
 		word += text;
 	}

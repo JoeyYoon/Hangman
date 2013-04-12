@@ -15,7 +15,6 @@ public class Hangman extends Game {
 		Assets.load();
 		mainMenu = new MainMenu(this);
 		gameScreen = new GameScreen(this);
-		// TODO Auto-generated method stub
 		setScreen(mainMenu);
 	}
 }
