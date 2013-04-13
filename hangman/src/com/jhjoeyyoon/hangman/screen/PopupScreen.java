@@ -44,7 +44,7 @@ public class PopupScreen implements Screen {
 		Gdx.input.setInputProcessor(stage);
 	
 		//dictionary file
-		FileHandle file = Gdx.files.internal("dict.txt");
+		FileHandle file = Gdx.files.internal("dictionary.txt");
 		String temp = file.readString();
 		
 		
