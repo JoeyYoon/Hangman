@@ -1,9 +1,7 @@
 package com.jhjoeyyoon.hangman.screen;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.Input.TextInputListener;
 import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -44,20 +42,23 @@ public class GameScreen implements Screen {
 		stage.act(delta);
 		stage.draw();
 		
-		if(textfield.getText().equalsIgnoreCase("a")) {
-			game.setScreen(game.mainMenu);
+		//check the answer
+		if(textfield.getText().equalsIgnoreCase("AAA")) {
+			textfield.getOnscreenKeyboard().show(false);
+			game.setScreen(new PopupScreen(game));
 		}
 		
+//		batch.begin();
+//compare the result
+//		font.draw(batch, text, 0, 0);
+//		if(textfield.getText().equalsIgnoreCase("a")) {
+//			font.draw(batch, "Congrats", 10, 40);
+//		} else {
+//			//font.draw(batch, textfield.getText(), 10, 40);
+//			font.draw(batch, text, 10, 40);
+//		}
+//		batch.end();
 		
-/*		batch.begin();
-		//compare the result
-		if(textfield.getText().equalsIgnoreCase("a")) {
-			font.draw(batch, "Congrats", 10, 40);
-		} else {
-			font.draw(batch, textfield.getText(), 10, 40);
-		}
-		batch.end();
-*/		
 		
 	}
 
@@ -110,7 +111,14 @@ public class GameScreen implements Screen {
 			//}
 		}	
 	});
-		
+	
+/*	Read a file from a dictionary
+	FileHandle file = Assets.handle;
+	String text = file.readString();
+
+	if(text.equalsIgnoreCase("AA")) {
+		game.setScreen(new PopupScreen(game));
+	}*/
 	
 
 	

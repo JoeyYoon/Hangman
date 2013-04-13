@@ -1,12 +1,14 @@
 package com.jhjoeyyoon.hangman;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 
 public class Assets {
 	public static Texture backgroundTexture,anotherBackground;
 	public static Skin skin;
+	public static FileHandle handle;
 	
 	public static void load () {
 		Texture.setEnforcePotImages(false); //preventing power of 2 error for an image file
@@ -15,6 +17,7 @@ public class Assets {
 		anotherBackground = new Texture(Gdx.files.internal("anotherback.jpg"));
 		
 		skin = new Skin(Gdx.files.internal("uiskin.json"));
+		handle = Gdx.files.internal("dict.txt");
 		
 	}
 

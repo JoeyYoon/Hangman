@@ -10,6 +10,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
+import com.badlogic.gdx.scenes.scene2d.utils.Align;
 import com.jhjoeyyoon.hangman.Assets;
 import com.jhjoeyyoon.hangman.Hangman;
 
@@ -52,9 +53,10 @@ public class MainMenu implements Screen {
 		Table table = new Table(Assets.skin);
 		
 		startGameButton = new TextButton("New Game", skin);
-		startGameButton.setX(Gdx.graphics.getWidth()/2);
-		startGameButton.setY(Gdx.graphics.getHeight()/2);
-		startGameButton.setPosition(0, 0);
+		//startGameButton.setX(Gdx.graphics.getWidth()/2);
+		//startGameButton.setY(Gdx.graphics.getHeight()/2);
+		//startGameButton.align(Align.center);
+		startGameButton.setPosition(Gdx.graphics.getWidth()/2, Gdx.graphics.getHeight()/2);
 
 		Gdx.input.setInputProcessor(stage);
 		//optionsButton = new TextButton("Options", skin);
